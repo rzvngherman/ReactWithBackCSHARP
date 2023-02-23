@@ -26,7 +26,7 @@ class EmployeeHtml extends Component {
                 </p>
 
                 <p>Counter {counter1}</p>
-                <button onClick={this.props.setCounter}>Add</button>
+                <button onClick={this.props.setCounter1}>Add</button>
 
             </div>
         )

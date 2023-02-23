@@ -23,15 +23,15 @@ export class Employee extends Component {
     render() {
         //return(<div>Employee page</div>)
 
-        const { name, title } = this.state;
+        const { name, title, counter } = this.state;
         return (
             <EmployeeHtml
                 name1={name}
                 title1={title}
-                counter1={this.state.counter}
+                counter1={counter}
                 setTitle1={this.setTitle}
                 setName1={this.setName}
-                setCounter={this.setCounter}
+                setCounter1={this.setCounter}
             />)
     }
 
