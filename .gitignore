@@ -4,3 +4,10 @@ AspnetCore-backend/obj/
 .vs/
 reactproject/src/App_copy_01.js
 reactproject/src/App_copy_02.js
+AspnetCore-backend/AspnetCore-backend.csproj.user
+AspnetCore-backend/Properties/serviceDependencies.pozealbum-react-UI - Zip Deploy.json
+AspnetCore-backend/Properties/serviceDependencies.pozealbum-react-UI - Zip Deploy.json.user
+AspnetCore-backend/Properties/PublishProfiles/pozealbum-react-UI - Zip Deploy.pubxml
+AspnetCore-backend/Properties/PublishProfiles/pozealbum-react-UI - Zip Deploy.pubxml.user
+AspnetCore-backend/Properties/ServiceDependencies/pozealbum-react-UI - Zip Deploy/apis1.arm.json
+AspnetCore-backend/Properties/ServiceDependencies/pozealbum-react-UI - Zip Deploy/profile.arm.json
