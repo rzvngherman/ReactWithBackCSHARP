@@ -1,0 +1,6 @@
+AspnetCore-backend/appsettings.Development.json
+AspnetCore-backend/bin/
+AspnetCore-backend/obj/
+.vs/
+reactproject/src/App_copy_01.js
+reactproject/src/App_copy_02.js

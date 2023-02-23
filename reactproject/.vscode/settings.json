@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/95134477-4d23-468e-b970-cd255f4cb315/AppServices/subscriptions/95134477-4d23-468e-b970-cd255f4cb315/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/pozealbum-react-FE",
+    "appService.deploySubpath": "."
+}

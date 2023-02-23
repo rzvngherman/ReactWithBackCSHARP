@@ -1,0 +1,2 @@
+D:\m\github_com2\ReadBlobImagesReact\reactproject\obj\Release\reactproject.esproj.SuggestedBindingRedirects.cache
+D:\m\github_com2\ReadBlobImagesReact\reactproject\obj\Release\reactproject.esproj.CoreCompileInputs.cache

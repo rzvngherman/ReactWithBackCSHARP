@@ -1,0 +1,6 @@
+D:\m\ReadBlobImagesReact\reactproject2\obj\Debug\reactproject.esproj.SuggestedBindingRedirects.cache
+D:\m\ReadBlobImagesReact\reactproject2\obj\Debug\reactproject.esproj.CoreCompileInputs.cache
+D:\m\ReadBlobImagesReact\reactproject\obj\Debug\reactproject.esproj.SuggestedBindingRedirects.cache
+D:\m\ReadBlobImagesReact\reactproject\obj\Debug\reactproject.esproj.CoreCompileInputs.cache
+D:\m\github_com2\ReadBlobImagesReact\reactproject\obj\Debug\reactproject.esproj.SuggestedBindingRedirects.cache
+D:\m\github_com2\ReadBlobImagesReact\reactproject\obj\Debug\reactproject.esproj.CoreCompileInputs.cache
