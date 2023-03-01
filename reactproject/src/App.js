@@ -1,5 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+//import "./jquery/jquery-3.2.1.slim.min.js"
+//import './bootstrap/bootstrap.min.css';
+//import "./bootstrap/bootstrap.min.js"
+
+//import './bootstrap/bootstrap.min.css'
+//import './bootstrap/bootstrap.bundle.min.js'
 
 import { Home } from './pages/Home';
 import { Employee } from './pages/Employee/Employee';

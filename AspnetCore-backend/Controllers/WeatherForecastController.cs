@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using System;
 
 namespace AspnetCore_backend.Controllers
 {
@@ -18,16 +19,38 @@ namespace AspnetCore_backend.Controllers
             _logger = logger;
         }
 
-        [HttpGet(Name = "GetWeatherForecast")]
-        public IEnumerable<WeatherForecast> Get()
+        [HttpGet("GetAllRandom")]
+        public IEnumerable<WeatherForecast> GetRandomData()
         {
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-            })
+            return GetAllData();
+        }
+
+        [HttpGet("GetOneRandom")]
+        public WeatherForecast GetOnlyOne()
+        {
+            return GetAllData()
+                    .First();
+        }
+
+
+        private WeatherForecast[] GetAllData()
+        {
+            var data = Enumerable.Range(1, 5).Select(
+                index =>
+                {
+                    var wf = new WeatherForecast
+                    {
+                        Date = DateTime.Now.AddDays(index),
+                        TemperatureC = Random.Shared.Next(-20, 55),
+                        Summary = Summaries[Random.Shared.Next(Summaries.Length)],
+                        Id = index,
+                    };
+                    wf.Details = "Details for id " + wf.Id + ", date " + wf.Date.ToString("f");
+                    return wf;
+                })
             .ToArray();
+
+            return data;
         }
     }
 }

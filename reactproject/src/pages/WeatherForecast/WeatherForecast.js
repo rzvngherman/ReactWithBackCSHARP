@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Collapse, Button } from "reactstrap"
 
 export class WeatherForecast extends Component {
 
@@ -14,8 +15,18 @@ export class WeatherForecast extends Component {
     //1
     constructor(props) {
         super(props);
-        this.state = { forecasts: [], loading: true };
+        this.state = { forecasts: [], loading: true, article: "" };
+        //bind event
+        this.handleArticleOpen = this.handleArticleOpen.bind(this);
     }
+
+    handleArticleOpen = (article) => {
+        //You just need to bind your event first
+        this.setState((prevState) => ({
+            ...prevState,
+            article
+        }));
+    };
 
     //2
     //static getDerivedStateFromProps(props, state) {
@@ -42,33 +53,46 @@ export class WeatherForecast extends Component {
     }
 
     renderForecastsTable(forecasts) {
+
+        const { name, title, counter } = this.state;
+        var article = this.state.article;
+
         return (
-            <table className='table table-striped' aria-labelledby="tabelLabel">
-                <thead>
-                    <tr>
-                        <th>Date</th>
-                        <th>Temp. (C)</th>
-                        <th>Temp. (F)</th>
-                        <th>Summary</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {forecasts.map(forecast =>
-                        <tr key={forecast.date}>
-                            <td>{forecast.date}</td>
-                            <td>{forecast.temperatureC}</td>
-                            <td>{forecast.temperatureF}</td>
-                            <td>{forecast.summary}</td>
+            <div className="container2">
+
+                <table className='table table-striped' aria-labelledby="tabelLabel">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Temp. (C)</th>
+                            <th>Temp. (F)</th>
+                            <th>Summary</th>
                         </tr>
-                    )}
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        {forecasts.map(forecast =>
+                            <tr key={forecast.date}>
+                                <td>{forecast.date}</td>
+                                <td>{forecast.temperatureC}</td>
+                                <td>{forecast.temperatureF}</td>
+                                <td>{forecast.summary}</td>
+                                <td>
+                                    <Button color="primary" onClick={() => this.handleArticleOpen(forecast.id)}>-- Details -- </Button>
+                                    <Collapse isOpen={article === forecast.id}>
+                                        <p>{forecast.details}</p>
+                                    </Collapse>
+                                </td>
+                            </tr>
+                        )}
+                    </tbody>
+                </table>
+            </div>
         );
     }
 
     async populateWeatherData() {
 
-        var url = '/api/weatherforecast';
+        var url = '/api/weatherforecast/GetAllRandom';
         const response = await fetch(url);
         const data = await response.json();
         this.setState({ forecasts: data, loading: false });
