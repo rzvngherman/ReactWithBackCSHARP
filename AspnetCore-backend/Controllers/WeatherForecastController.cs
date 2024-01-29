@@ -50,6 +50,8 @@ namespace AspnetCore_backend.Controllers
                 })
             .ToArray();
 
+            Thread.Sleep(10000); //10 seconds
+
             return data;
         }
     }

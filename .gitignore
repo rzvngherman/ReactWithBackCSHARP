@@ -2,6 +2,7 @@ AspnetCore-backend/appsettings.Development.json
 AspnetCore-backend/bin/
 AspnetCore-backend/obj/
 .vs/
+reactproject/obj/
 reactproject/src/App_copy_01.js
 reactproject/src/App_copy_02.js
 AspnetCore-backend/AspnetCore-backend.csproj.user
